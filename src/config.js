@@ -55,6 +55,11 @@ var application = {
             visibility: "public"
         },
         {
+            id: "upload",
+            title: "Upload File",
+            visibility: "public"
+        },
+        {
             id: "browser",
             title: "Variant Browser",
             visibility: "public",
