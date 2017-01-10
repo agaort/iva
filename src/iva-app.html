@@ -28,6 +28,7 @@
 <link rel="import" href="../lib/jsorolla/src/lib/opencga/catalog/opencga-study.html">
 <link rel="import" href="../lib/jsorolla/src/lib/opencga/catalog/opencga-login.html">
 <link rel="import" href="../lib/jsorolla/src/lib/opencga/catalog/opencga-upload-file.html">
+<link rel="import" href="../bower_components/jsorolla/src/lib/opencga/catalog/files/opencga-file-upload.html">
 <link rel="import" href="components/iva-settings.html">
 
 <dom-module id="iva-app">
@@ -269,9 +270,10 @@
                     <iva-settings opencga-client="{{opencgaClient}}" on-config="refreshConfig" default-config="{{defaultConfig}}"></iva-settings>
                 </div>
 
-                <div class="collapse content" id="upload" style="width: 40%; margin-left: 2%">
+                <div class="collapse content" id="upload" >
                     <br>
-                    <opencga-upload-file opencga-client="{{opencgaClient}}" study="{{study}}" studies="{{selectedProject.studies}}"></opencga-upload-file>
+                    <!--<opencga-upload-file opencga-client="{{opencgaClient}}" study="{{study}}" studies="{{selectedProject.studies}}"></opencga-upload-file>-->
+                    <opencga-file-upload opencga-client="{{opencgaClient}}" projects="{{projects}}" project="{{selectedProject}}" selectedProject="{{selectedProject}}" study="{{study}}" studies="{{selectedProject.studies}}"></opencga-file-upload>
                 </div>
                 <!--BreadCrumb reference-->
                 <div class="collapse content" id="projectList" style="width: 60%; margin: auto">
